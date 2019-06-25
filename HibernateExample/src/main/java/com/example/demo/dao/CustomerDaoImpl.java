@@ -22,6 +22,7 @@ public class CustomerDaoImpl implements CustomerDao{
 	public List<User> getAllCustomers() {
 		Session session = this.sessionFactory.getCurrentSession();
 		List<User>  userlist = session.createQuery("from User").list();
+		
 		return userlist;
 	}
  
@@ -42,6 +43,12 @@ public class CustomerDaoImpl implements CustomerDao{
 	public void updateCustomer(User user) {
 		Session session = this.sessionFactory.getCurrentSession();
 		session.update(user);
+	}
+	public User getUserById(int id){
+		Session session = this.sessionFactory.getCurrentSession();
+		User user = (User) session.get(User.class, id);
+		return user;
+		
 	}
 		
 	}

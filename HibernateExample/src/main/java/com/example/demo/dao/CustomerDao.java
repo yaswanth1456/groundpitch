@@ -13,7 +13,7 @@ public interface CustomerDao {
 
 	public User addCustomer(User user);
 
-	
+	public User getUserById(int id);
 	 
 	public void updateCustomer(User user) ;
 
