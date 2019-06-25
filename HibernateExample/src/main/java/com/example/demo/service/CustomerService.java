@@ -16,7 +16,7 @@ public class CustomerService {
  
 	@Autowired
 	CustomerDao customerdao;
- 
+ //basic controller
 	@Transactional
 	public List<User> getAllCustomers() {
 		return customerdao.getAllCustomers();
